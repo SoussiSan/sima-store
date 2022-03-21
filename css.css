@@ -1,0 +1,196 @@
+/*start variables*/
+:root{
+    --main-color: orange;
+}
+/*end variables*/
+/*global rules*/
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -mow-box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: black;
+}
+ul{
+    list-style-type: none;
+}
+/*end global rules*/
+
+
+
+/*container*/
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 600px;
+}
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
+/*end container*/
+/*start header*/
+header{
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+header .container::after{
+    content: "";
+    position: absolute;
+    height: 1px;
+    background-color: #a2a2a2;
+    bottom: -1px;
+    width: calc(100% - 30px);
+    left: 15px;
+}
+header .logo{
+    height: 25px;
+}
+header nav{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+header nav ul{
+    display: flex;
+}
+header nav ul a{
+    color: white;
+    text-decoration: none;
+    display: bock;
+    font-size: 14px;
+    transition: 0.3s;
+    padding: 40px 10px;
+    position: relative;
+    z-index: 1;
+}
+header nav .active, header nav a:hover{
+    color: var(--main-color);
+    border-bottom: 2px solid var(--main-color);
+}
+header nav .form{
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin-left: 30px;
+    border-left: 1px solid white;
+}
+header nav .form i{
+    color: white;
+    position: absolute;
+    font-size: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+}
+/*end header*/
+/*start landing*/
+.landing{
+    min-height: 100vh;
+    background-image: url('bg.jpg');
+    background-color: black;
+    background-size: cover;
+    position: relative
+}
+.landing .overlay{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+.landing .text{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 3%;
+    background-color: #ffa5007a;
+    color: black;
+    display: flex;
+    justify-content: flex-end;
+}
+.landing .text .content{
+    max-width: 500px;
+}
+.landing .text .content h2{
+    font-size: 32px;
+    line-height: 1.6;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.landing .text .content p{
+    font-size: 14px;
+    line-height: 2;
+}
+
+/*end landing*/
+ /*start design*/
+.design{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    height: 600px;
+    position: relative;
+    background-image: url("pic.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+
+
+}
+.design::before{
+    content: '';
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 50%);
+}
+.design .image,
+.design .text{
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+.design .image{
+    text-align: center;
+}
+.design .image img{
+    position: relative;
+}
+.design .text{
+    color: black;
+    padding: 50px;
+    background-color: vra(--transparent-color);
+}
+
+ /*end design*/
+
+
